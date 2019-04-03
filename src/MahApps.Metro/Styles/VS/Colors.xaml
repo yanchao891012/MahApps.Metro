@@ -84,6 +84,7 @@
     <SolidColorBrush x:Key="SubmenuItemBackground" Color="#1B1B1C" options:Freeze="True" />
     <SolidColorBrush x:Key="SubmenuItemBackgroundHighlighted" Color="#333334" options:Freeze="True" />
     <SolidColorBrush x:Key="MenuDisabledForeground" Color="#656565" options:Freeze="True" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.MenuTextBrushKey}" Color="#FFFFFF" options:Freeze="True" />
 
     <!--  Scroll Bar  -->
     <SolidColorBrush x:Key="ScrollBarPageButtonBackgroundHighlighted" Color="#05FFFFFF" options:Freeze="True" />

@@ -16,11 +16,16 @@
 
     <Style x:Key="StandardMenu" TargetType="{x:Type Menu}">
         <Setter Property="Background" Value="{DynamicResource LightBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" />
+    </Style>
+
+    <Style x:Key="StandardContextMenu" TargetType="{x:Type ContextMenu}">
+        <Setter Property="Background" Value="{DynamicResource SubmenuItemBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" />
     </Style>
 
     <Style x:Key="StandardMenuItem" TargetType="{x:Type MenuItem}">
-        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Menu}}}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type MenuItem}">
@@ -112,7 +117,7 @@
                             <Setter TargetName="IGTHost" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="Icon" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="SubMenu" Property="Margin" Value="2 3 2 2" />
-                            <Setter TargetName="SubMenuBorder" Property="BorderThickness" Value="1 1 1 1" />
+                            <Setter TargetName="SubMenuBorder" Property="BorderThickness" Value="1" />
                             <Setter TargetName="SubMenuPopup" Property="Placement" Value="Bottom" />
                             <Setter TargetName="TransitionBorder" Property="Width" Value="{Binding ActualWidth, ElementName=Grid}" />
                         </Trigger>
